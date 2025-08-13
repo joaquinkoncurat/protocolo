@@ -1,155 +1,155 @@
-# Protocolo paso a paso
+# Protocolo Operativo — Kinect + TouchDesigner + Ableton Live
 
-**Sistema:** Kinect + TouchDesigner + Ableton Live
-**Proyecto TD:** `Lectura de datos nuevo del cuerpo.toe`
+**Sistema:** Kinect + TouchDesigner + Ableton Live  
+**Proyecto TouchDesigner:** `Juntarse espacio reducido.toe`  
+**Proyecto Ableton Live:** `Sonidos.als`
 
 ---
 
 ## 1) Requisitos previos
 
-### Hardware
+### Hardware necesario
+- **Notebook** (con TouchDesigner y Ableton Live instalados y funcionando).
+- **Kinect** (modelo compatible con drivers instalados).
+- **Soporte o mesa** para el sensor (altura recomendada: **aprox. 75 cm**).
+- **Zapatilla eléctrica** y **alargues** si son necesarios.
+- **Parlantes** o **auriculares** para monitorear el audio.
+- **Espacio despejado** frente al sensor:
+  - Ancho: **3 m**.
+  - Fondo: **3 a 4 m** como mínimo.
+  - Fondo con **pared lisa** (sin objetos brillantes o espejos).
 
-* Notebook (recom.: puerto **USB 3.0** libre para Kinect; evitar hubs USB).
-* **Kinect** (v1, v2 o Azure) con **fuente de alimentación** y **cable USB**.
-* Soporte o mesa para el sensor (altura **aprox. 75 cm** — altura estándar de mesa).
-* Zapatilla eléctrica y alargues si hacen falta.
-* Espacio despejado frente al sensor (ideal **3 × 3 m** con fondo de **pared lisa**).
-
-### Software (instalado y probado previamente)
-
-* **TouchDesigner** (proyecto: `Lectura de datos nuevo del cuerpo.toe`).
-* **Ableton Live** (proyecto “Archivo de Ableton” del show/juego).
-* **Drivers del Kinect** según modelo (Kinect v1: SDK 1.8; Kinect v2: SDK 2.0; Azure Kinect: SDK correspondiente).
-  *Nota:* Si ya funciona en esta notebook, no es necesario reinstalar; solo verificar conexión.
+### Software (preinstalado y probado)
+- **TouchDesigner** (proyecto `Juntarse espacio reducido.toe`).
+- **Ableton Live** (proyecto `Sonidos.als`).
+- **Drivers Kinect**:
+  - Si el sensor ya funciona en la notebook, no reinstalar; solo verificar conexión.
 
 ---
 
 ## 2) Preparación del espacio
-
-1. **Despejar** completamente el área frente a la Kinect. Dejar solo a las personas que van a jugar.
-
-   * Evitar **objetos** que se muevan, espejos, vidrios y superficies brillantes.
-2. **Fondo**: preferir una **pared lisa** y uniforme.
-3. **Iluminación**: pareja/difusa, sin contraluces fuertes ni foco directo a la cámara.
-4. **Altura del sensor**: colocar la Kinect a **\~75 cm** del piso (altura estándar de mesa).
-5. **Distancia de trabajo**: marcar una zona de juego entre un máximo de **0,75 m y 3,5 m** del sensor .
-6. **Orientación** del sensor: apuntar al centro de la zona de juego; si hace falta, **inclinación leve (0–10°)** hacia el torso de les participantes (hacia arriba).
+1. **Despejar** totalmente el área de juego (retirar objetos y personas que no participen).
+2. Fondo: **pared lisa** y uniforme.
+3. **Iluminación**: pareja y difusa, sin contraluces ni luz directa a la cámara.
+4. Colocar la Kinect a **75 cm de altura**.
+5. Marcar la zona de juego: **entre 1,0 m y 3,5 m** desde el sensor (óptimo: 2,0–2,5 m).
+6. Orientar la Kinect hacia el centro de la zona de juego, con inclinación leve (**0–10°**) hacia el torso de los jugadores.
 
 ---
 
 ## 3) Conexión y encendido
-
-1. Conectar la **Kinect a la electricidad** (si tu modelo requiere fuente) y luego al **USB 3.0** de la notebook.
-2. Conectar la notebook y el resto de aparatos a la red eléctrica.
-3. Esperar unos segundos a que el sistema reconozca el dispositivo (sin luces de error en el adaptador, si aplica).
+1. Conectar la Kinect a la **electricidad** y luego al **USB** de la notebook.
+2. Conectar la notebook y equipos de audio a la red eléctrica.
+3. Esperar que el sistema reconozca la Kinect (sin luces de error en adaptador).
+4. Conectar los dispositivos de audio (parlantes o auriculares).
 
 ---
 
 ## 4) Inicio de software
-
-1. Abrir **TouchDesigner** y cargar el archivo: `Lectura de datos nuevo del cuerpo.toe`.
-2. **Ableton Live** debería iniciarse automáticamente.
-
-   * Si **no** se abre: iniciar **Ableton Live** manualmente y cargar el **“Archivo de Ableton”** correspondiente.
-3. En **Ableton**, ir al set/música del show. **Recomendación:** colocar el **volumen master en 0** antes de reproducir.
-4. Aclarar mas y agragar imagenes de como reproducir y como bajar el volumen
+1. Abrir **TouchDesigner** y cargar `Juntarse espacio reducido.toe`.
+2. **Ableton Live** debería iniciarse automáticamente con `Sonidos.als`.  
+   - Si no se abre, iniciarlo manualmente y cargar el proyecto.
 
 ---
 
-## 5) Verificación rápida antes de comenzar
-
-1. **Kinect en TouchDesigner**: ubicar los nodos del sensor (*Kinect CHOP/TOP)*.
-
-   * Confirmar que hay **imagen** y/o **tracking** (esqueleto/manos) en el viewer.
-   * Chequear tasa de cuadros (FPS) estable (\~30 FPS según modelo).
-2. **Rutas de grabación**:
-
-   * **Video**: localizar el **Movie File Out TOP** (o nodo equivalente) y verificar **ruta de archivo** y que la **carpeta exista**.
-   * **Datos**: localizar el nodo de volcado (**File Out DAT/CHOP**, **Record DAT/CHOP** o equivalente) y verificar **ruta** y **formato** (CSV/TSV).
-   * Si el proyecto usa un nombre de sesión, fijarlo (por ej., `YYYY-MM-DD_HHMM_SesionX`).
-3. **Audio/Música**: en Ableton, verificar que el **set** esté listo y el **Play** funcione.
+## 5) Configuración en Ableton Live
+1. En Ableton, cargar el set del show.
+2. Cambiar de vista para ver las pistas de audio (referencia: *Imagen 2*).
+3. Presionar las teclas **1**, **2**, **3** o **4** para seleccionar el audio a usar.  
+   - Si está reproduciendo, presionar **Barra espaciadora** para detenerlo.  
+   - Ejemplo: presionar **3** debería mostrar la bandera indicada en *Imagen 3*.
+4. Colocar el **volumen master en 0** antes de reproducir (*Imagen 1*).
 
 ---
 
-## 6) Ejecución — Inicio del juego y grabación
+## 6) Verificación antes de comenzar
+### Kinect en TouchDesigner
+- Localizar nodos **Kinect CHOP** y **Kinect TOP**:
+  - **CHOP**: mostrar variables en movimiento si un jugador es detectado.
+  - **TOP**: mostrar imagen en tiempo real.
 
-1. En **Ableton Live**: con el **volumen master en 0**, presionar **Play** en la música del show. (explicar mas esto)
+### Configuración de rutas de grabación
+1. En TouchDesigner, ir a:
+   - `field COMP field_parejas`
+   - `field COMP field_condicion`
+2. Estos nodos definen la carpeta de guardado.
+3. Para modificar: presionar la **estrella inferior derecha** (*Imagen 9*).
+4. Cambiar nombres siguiendo la nomenclatura:
+   - Ej.: `Pareja1`, `Pareja2` (P mayúscula, resto minúscula).
+   - Ej.: `condicion1` (sin tilde ni espacios).
 
-   * Ajustar el volumen a gusto **luego** de verificar niveles.
-2. En **TouchDesigner**: buscar el **CHOP Trigger** llamado `inicio`.
-
-   * Seleccionar el nodo `inicio` y, en el panel de **Parameters**, presionar el botón **Pulse** del parámetro **Trigger** (o el botón/ícono de pulso que tenga el nodo).
-   * Alternativa: si el `inicio` está conectado a un **Button COMP**, hacer **click** en el botón.
-3. **Efecto esperado** al disparar `inicio`:
-
-   * Se **inicia el juego**.
-   * Comienza la **grabación de video** (Movie File Out en modo Record) y el **log de datos** (CSV/CHOP/DAT según corresponda).
-   * Algún **indicador** en pantalla/TD debería pasar a **“REC”** o similar (según cómo esté diseñado el proyecto).
-
----
-
-## 7) Durante la sesión
-
-* Supervisar que **FPS** y **tracking** se mantengan estables.
-* Verificar que el **archivo de video** vaya creciendo en la carpeta y que el **log de datos** se esté actualizando (si el proyecto escribe en caliente).
-* Mantener despejada la **zona de juego**.
+### Audio en Ableton
+- Confirmar que el set está listo y el botón **Play** funciona.
 
 ---
 
-## 8) Finalización de la sesión
-
-1. En **TouchDesigner**: buscar el **CHOP Trigger** llamado `FIN` y **pulsarlo** (mismo procedimiento que con `inicio`).
-
-   * **Efecto esperado**: se **detiene** el juego y la **grabación** de video/datos.
-2. En **Ableton Live**: **Stop** si no se detuvo automáticamente.
-3. **Verificar archivos**:
-
-   * Reproducir **unos segundos** del **video** grabado.
-   * Abrir el **CSV/TSV** o archivo de datos y confirmar que tiene contenido.
-4. **Guardar/Respaldar**: si el proyecto genera carpeta de sesión, **renombrar** con fecha y **copiar** a respaldo si corresponde.
-5. **Cerrar** Ableton y TouchDesigner.
-6. **Apagar**/desconectar la Kinect y equipos.
-
----
-
-## 9) Checklist rápido (pre–post)
-
-**Antes de iniciar**
-
-*
-
-**Para comenzar**
-
-*
-
-**Para finalizar**
-
-*
+## 7) Ejecución — Inicio de juego y grabación
+1. En **Ableton Live**:
+   - Con master en **0**, presionar **Play**.
+   - Ajustar volumen luego de verificar niveles.
+2. En **TouchDesigner**:
+   - Buscar el **CHOP Trigger** `GRABARR`.
+   - Seleccionarlo (*Imagen 5*).
+   - En **Parameters**, presionar botón **Pulse** junto a "Trigger" (*Imagen 6*).
+3. Efectos esperados:
+   - Inicio del juego.
+   - Grabación de **video** (.mp4) y **datos** (.csv).
+   - Verificación: valor `0 chan1` cambia momentáneamente a `1 chan`.
 
 ---
 
-## 10) Solución de problemas (rápido)
+## 8) Durante la sesión
+- Supervisar FPS y estabilidad de tracking.
+- Verificar crecimiento del archivo de video y actualización del CSV.
+- Mantener despejada la zona de juego.
 
-* **Kinect no aparece / sin tracking**:
+---
 
-  1. Revisar **alimentación** y **USB 3.0** directo; 2) Cambiar de puerto; 3) Cerrar y reabrir TD; 4) Reiniciar la notebook; 5) Verificar **drivers** del modelo.
-* **El video no graba**:
-  Abrir el **Movie File Out TOP** → chequear **File**, **Type/Codec** y que el **parámetro Record** esté **On** cuando se dispara `inicio`. Verificar que la **carpeta exista** y haya espacio en disco.
-* **Datos no se guardan**:
-  Revisar el nodo de **File Out/Record (DAT/CHOP)**: ruta, modo **Append/Overwrite**, permisos de carpeta.
-* **Sonido muy alto**:
-  Siempre poner **master en 0** antes de **Play** y subir gradualmente.
-* **FPS bajo / tracking inestable**:
-  Mejorar iluminación difusa, reducir apps abiertas, mantener distancia **2–2,5 m**, evitar sombras fuertes y elementos móviles en escena.
+## 9) Finalización de la sesión
+1. En TouchDesigner, pulsar `PAUSARR` (mismo procedimiento que `GRABARR`).
+2. En Ableton, detener reproducción.
+3. Verificar archivos:
+   - Reproducir unos segundos del video.
+   - Abrir CSV para confirmar datos.
+4. Guardar y respaldar:
+   - Renombrar carpeta con fecha y copiar a backup.
+5. Cerrar Ableton y TouchDesigner.
+6. Apagar y desconectar equipos.
+
+---
+
+## 10) Solución de problemas rápida
+- **Kinect sin señal**:
+  1. Revisar alimentación y USB 3.0.
+  2. Cambiar puerto.
+  3. Reiniciar TouchDesigner.
+  4. Reiniciar notebook.
+  5. Revisar drivers.
+- **Video no graba**:
+  - Revisar `Movie File Out TOP` → File, Codec y parámetro Record.
+  - Verificar carpeta y espacio en disco.
+- **Datos no guardan**:
+  - Revisar nodos de File Out DAT/CHOP, permisos de carpeta.
+- **Sonido alto**:
+  - Siempre iniciar con master en 0 y subir gradualmente.
+- **FPS bajo**:
+  - Mejorar iluminación, cerrar otras apps, mantener distancia óptima.
 
 ---
 
 ## 11) Parámetros de referencia
+- Altura Kinect: **75 cm**.
+- Distancia de juego: **1,0 – 3,5 m** (óptimo: 2,0–2,5 m).
+- Inclinación: **0–10°** hacia torso.
+- Zona despejada: **3 × 3 m**.
 
-* **Altura de la Kinect**: **≈ 75 cm** (altura típica de mesa).
-* **Distancia de juego**: **1,0 a 3,5 m** (óptimo **2,0–2,5 m**).
-* **Inclinación**: **0–10°** hacia el torso si hace falta.
-* **Zona despejada sugerida**: **3 × 3 m**.
+---
+
+### Notas finales
+- Usar indicadores visuales del proyecto para confirmar estados (ej.: “REC”).
+- La automatización de inicio/detención de Ableton vía OSC/MIDI es posible pero no incluida en este protocolo.
+
+
 
 ---
 
