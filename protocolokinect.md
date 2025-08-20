@@ -57,32 +57,32 @@
 ## 5) Configuración en Ableton Live
 ### Introducción
 En Ableton existen dos tipos de vistas: Arrangement y Session.
-[Imagen Arrangement](imgTutorial1.png) y [Imagen Session](imgTutorial2.png)
+[Imagen Arrangement](imgTutorial1.jpg) y [Imagen Session](imgTutorial2.jpg)
   - 1. En Ableton, cargar el set del show.
   Vista Arragement:
-  - 2. Cambiar de vista para ver las pistas de audio [Ver imagen 3](imgTutorial3.png).
-  - 3. Presionar las teclas **1**, **2**, **3** o **4** para seleccionar el audio a usar.
+  - 2. Ir a la vista Arragement para ver las pistas de audio .
+  - 3. Presionar las teclas **1**, **2**, **3** o **4** para seleccionar el audio a usar [Ver imagen 3](imgTutorial3.jpg).
      - Si está reproduciendo, presionar **Barra espaciadora** para detenerlo.  
-     - Ejemplo: presionar **3** debería mostrar la bandera indicada en [Ver imagen 2](imgTutorial2.png).
+     - Ejemplo: presionar **3** debería mostrar la bandera indicada en [Ver imagen 4](imgTutorial4.jpg).
   Vista Session:
-  - 4. Colocar el **volumen master en 0** antes de reproducir [Bajar volumen](imgTutorial3.png).
+  - 4. Colocar el **volumen master en 0** antes de reproducir [Imagen bajar volumen](imgTutorial5.jpg).
 
 ---
 
 ## 6) Verificación antes de comenzar
 ### Kinect en TouchDesigner
-- Localizar nodos **Kinect CHOP** y **Kinect TOP** [Ver imagen 4](imgTutorial4.png):
-  - **CHOP**: mostrar variables en movimiento si un jugador es detectado.
-  - **TOP**: mostrar imagen en tiempo real.
+- Localizar nodos **Kinect CHOP** y **Kinect TOP** [Ver imagen 6](imgTutorial6.jpg):
+  - **CHOP**: al acercarce deberia mostrar las variables de los jugadores en pantalla.
+  - **TOP**: deberia mostrar imagen en tiempo real.
 
 
 ### Configuración de rutas de grabación
-  - 1. En TouchDesigner, ir a [Ver imagen 8](imgTutorial8.png):
+  - 1. En TouchDesigner, ir a [Ver imagen 7](imgTutorial7.jpg):
    - `field COMP field_parejas`
    - `field COMP field_condicion`
   - 2. Estos nodos definen el nombre de la carpeta de guardado.
-  - 3. Para modificar el nombre de la carpeta: presionar la **estrella inferior derecha** en field_pareja y/o field_condicion [Ver imagen 9](imgTutorial9.png).
-  - 4. Al presionar la estrella inferior derecha, podes modificar el contenido. [Ver imagen 10](imgTutorial10.png) 
+  - 3. Para modificar el nombre de la carpeta: presionar la **estrella inferior derecha** en field_pareja y/o field_condicion [Ver imagen 8](imgTutorial8.jpg).
+  - 4. Al presionar la estrella inferior derecha, podes modificar el contenido. [Ver imagen 9](imgTutorial9.jpg) 
   - 5. Cambiar nombres siguiendo la nomenclatura:
    - Ej.: `Pareja1`, `Pareja2` (P mayúscula, resto minúscula, y terminando con el número de la pareja).
    - Ej.: `Condicion1`, `Condicion2` (C mayúscula, resto minúscula, sin tilde en la 'o', y terminando con el número de la condición).
@@ -102,17 +102,17 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 > **Nota:** Al darle play o iniciar la música, no se deberia escuchar el sonido (deberia estar bajado como se ve en el punto " 5) 4. ").
 
   - 2. En **TouchDesigner**:
-   - Buscar el **CHOP Trigger** `GRABARR` [Ver imagen 5](imgTutorial5.png).
+   - Buscar el **CHOP Trigger** `GRABARR` [Ver imagen 10](imgTutorial10.jpg).
    - Hacer clic izquierdo para seleccionarlo.
-   - En **Parameters** (ventana con información que se encuentra en la esquina superior derecha), presionar botón **Pulse** junto a "Trigger Pulse" [Ver imagen 12](imgTutorial12.png).
+   - En **Parameters** (ventana con información que se encuentra en la esquina superior derecha), presionar botón **Pulse** junto a "Trigger Pulse" [Ver imagen 11](imgTutorial11.jpg).
    - En este momento inicia la grabación de datos y video.
     
   - 3. Efectos esperados:
    - Inicio del juego.
    - Grabación de **video** (.mp4) y **datos** (.csv).
-   - Verificación: valor `0 chan1` cambia momentáneamente a `1 chan` [Ver imagen 6](imgTutorial6.png).
+   - Verificación: valor `0 chan1` cambia momentáneamente a `1 chan` [Ver imagen 12](imgTutorial12.jpg).
   
-> **Nota:** Mientras esta en ejecución el programa, se puede observar que el nodo script2 se conecta con distintos nodos del sistema   [Ver imagen 7](imgTutorial7.png)
+> **Nota:** Mientras esta en ejecución el programa, se puede observar que el nodo script2 se conecta con distintos nodos del sistema   [Ver imagen 13](imgTutorial13.jpg)
 
 ---
 
@@ -124,12 +124,12 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 
 ## 9) Finalización de la sesión
   - 1. En TouchDesigner, pulsar `PAUSARR` (mismo procedimiento que `GRABARR`).
-    - Buscar el **CHOP Trigger** `GRABARR` [Ver imagen 14](imgTutorial14.png).
+    - Buscar el **CHOP Trigger** `PAUSARR` [Ver imagen 14](imgTutorial14.jpg).
     - Hacer clic izquierdo para seleccionarlo.
-    - En **Parameters** (ventana con información que se encuentra en la esquina superior derecha), presionar botón **Pulse** junto a "Trigger Pulse" [Ver imagen 13](imgTutorial13.png).
+    - En **Parameters** (ventana con información que se encuentra en la esquina superior derecha), presionar botón **Pulse** junto a "Trigger Pulse" [Ver imagen 15](imgTutorial15.jpg).
     - En este momento finaliza la grabación de datos y video.
   - 2. En Ableton, detener reproducción.
-    - Ir a la vista de Arrangement y pulsar la barra espaciadora o presionar pausa [Ver imagen 15](imgTutorial15.png).  
+    - Ir a la vista de Arrangement y pulsar la barra espaciadora o presionar pausa [Ver imagen 16](imgTutorial16.jpg).  
   - 3. Verificar archivos:
    - Reproducir unos segundos del video.
    - Abrir CSV para confirmar datos.
