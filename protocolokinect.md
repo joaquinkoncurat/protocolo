@@ -1,4 +1,4 @@
-<img width="887" height="241" alt="image" src="https://github.com/user-attachments/assets/411c5603-96a2-41ca-9665-5b0f61c59985" /><img width="1009" height="431" alt="image" src="https://github.com/user-attachments/assets/f69d7f9e-fe65-4641-9760-eaf7b8b4c5fe" /># Protocolo Operativo — Kinect + TouchDesigner + Ableton Live
+# Protocolo Operativo — Kinect + TouchDesigner + Ableton Live
 
 **Sistema:** Kinect + TouchDesigner + Ableton Live  
 **Proyecto TouchDesigner:** `Juntarse espacio reducido.toe`  
