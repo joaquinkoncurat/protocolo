@@ -71,21 +71,25 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 
 ## 6) Verificación antes de comenzar
 ### Kinect en TouchDesigner
-- Localizar nodos **Kinect CHOP** y **Kinect TOP** [Ver imagen 6](imgTutorial6.jpg):
+- Localizar nodos **Kinect CHOP** y **Kinect TOP** para ver si la Kinect esta conectada con TouchDesigner [Ver imagen 6](imgTutorial6.jpg):
   - **CHOP**: al acercarce deberia mostrar las variables de los jugadores en pantalla.
   - **TOP**: deberia mostrar imagen en tiempo real.
 
+> **Consejo:** Si al iniciar el programa `Juntarse espacio reducido.toe` se ve de fondo lo que la cámara de la Kinect graba, ya esta funcionando correctamente la conexión.
 
 ### Configuración de rutas de grabación
   - 1. En TouchDesigner, ir a [Ver imagen 7](imgTutorial7.jpg):
    - `field COMP field_parejas`
    - `field COMP field_condicion`
-  - 2. Estos nodos definen el nombre de la carpeta de guardado.
+  - 2. Estos nodos definen el nombre de la carpeta de guardado con este formato: "/Pareja1/Condicion1/Repeticion1/video.mp4".
   - 3. Para modificar el nombre de la carpeta: presionar la **estrella inferior derecha** en field_pareja y/o field_condicion [Ver imagen 8](imgTutorial8.jpg).
   - 4. Al presionar la estrella inferior derecha, podes modificar el contenido. [Ver imagen 9](imgTutorial9.jpg) 
   - 5. Cambiar nombres siguiendo la nomenclatura:
    - Ej.: `Pareja1`, `Pareja2` (P mayúscula, resto minúscula, y terminando con el número de la pareja).
    - Ej.: `Condicion1`, `Condicion2` (C mayúscula, resto minúscula, sin tilde en la 'o', y terminando con el número de la condición).
+
+> **Aclaración:** El nombre de la carpeta repeticion no se anota manualmente, se hace automatico. Si una pareja determinada, con una condicion determinada no tiene ninguna prueba, se genera la carpeta repeticion 1, si ya tiene uno o mas repeticiones, se genera la carpeta repeticion siguiente para guardar ahi los datos.
+
 
 ### Audio en Ableton
 - Por último, verigicar que el set de Ableton está listo.
@@ -117,8 +121,8 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 ---
 
 ## 8) Durante la sesión se puede
-- Verificar crecimiento del archivo de video y actualización del CSV.
-- Mantener despejada la zona de juego.
+- Verificar la creación de la ruta de guardado.
+- Verificar el crecimiento del archivo de video y actualización del CSV.
 
 ---
 
@@ -138,26 +142,13 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 
 ---
 
-## 10) Solución de problemas rápida
-- **Kinect sin señal**:
-  1. Revisar alimentación y USB 3.0.
-  2. Cambiar puerto.
-  3. Reiniciar TouchDesigner.
-  4. Reiniciar notebook.
-- **Sonido alto**:
-  - Siempre iniciar con master en 0 y subir gradualmente.
-- **FPS bajo**:
-  - Mejorar iluminación, cerrar otras apps, mantener distancia óptima.
+## 10) Iniciar nueva repetición
+- Si se quiere realizar otra repetición: volver al punto  5) Configuración en Ableton Live. Y luego:
+    - Si es la misma pareja y condición, ir al punto 7)  Ejecución — Inicio de juego y grabación
+    - Si se cambia la pareja o condición, volver al punto 6) Verificación antes de comenzar
 
 ---
 
-## 11) Parámetros de referencia
-- Altura Kinect: **75 cm**.
-- Distancia de juego: **1,0 – 3,5 m** (óptimo: 2,0–2,5 m).
-- Inclinación: **0–10°** hacia torso.
-- Zona despejada: **3 × 3 m**.
-
----
-
-### Notas finales
+### Aclaraciones finales
 - Si el programa se detiene o sucede algo durante la grabación, los archivos se guardan igualmente.
+
