@@ -1,7 +1,7 @@
 # Protocolo Operativo — Kinect + TouchDesigner + Ableton Live
 
 **Sistema:** Kinect + TouchDesigner + Ableton Live  
-**Proyecto TouchDesigner:** `Juntarse espacio reducido.toe`, `Juntarse espacio.toe`  
+**Proyecto TouchDesigner:** `Juntarse espacio reducido.toe`, `Juntarse espacio completo.toe`, `Juntarse espacio reducido ruido blanco de fondo.toe`, `Juntarse espacio completo ruido blanco de fondo.toe`.
 *(ambos funcionan de manera idéntica, pero utilizan variables diferentes)*
 **Proyecto Ableton Live:** `Sonidos.als`
 
@@ -21,7 +21,7 @@
   - Fondo con **pared lisa** (sin objetos brillantes, espejos, ventanas que entre luz, y minimizar los objetos como bancos o sillas).
 
 ### Software (preinstalado y probado)
-- **TouchDesigner** con los proyectos: `Juntarse espacio reducido.toe`, `Juntarse espacio.toe`.
+- **TouchDesigner** con los proyectos: `Juntarse espacio reducido.toe`, `Juntarse espacio completo.toe`, `Juntarse espacio reducido ruido blanco de fondo.toe`, `Juntarse espacio completo ruido blanco de fondo.toe`.
 - **Ableton Live** (proyecto `Sonidos.als`).
 - **Drivers Kinect**:
   - Si el sensor ya funciona en la notebook, no reinstalar; solo verificar conexión.
@@ -44,7 +44,7 @@
   - 3. Esperar que el sistema reconozca la Kinect (sin luces de error en adaptador).
   - 4. Conectar los dispositivos de audio (parlantes o auriculares).
 
-> **Consejo:** Para saber si la Kinect esta conectada adecuadamente con la Notebook, al iniciar al programa `Juntarse espacio reducido.toe` o `Juntarse espacio.toe` en TouchDesigner automaicamente deberías ver de fondo la imagen que toma la Kinect.
+> **Consejo:** Para saber si la Kinect esta conectada adecuadamente con la Notebook, al iniciar al programa `Juntarse espacio reducido.toe` o `Juntarse espacio completo.toe` en TouchDesigner automaicamente deberías ver de fondo la imagen que toma la Kinect.
 
 ---
 
@@ -52,7 +52,7 @@
   - 1. Abrir **TouchDesigner**
     - Elegir cuál de los dos proyectos usar según corresponda:
       - `Juntarse espacio reducido.toe`
-      - `Juntarse espacio.toe`
+      - `Juntarse espacio completo.toe`
   - 2. **Ableton Live** debería iniciarse automáticamente con `Sonidos.als`.  
      - Si no se abre, iniciarlo manualmente y cargar el proyecto.
 
@@ -65,15 +65,13 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 
   - 1. En Ableton, cargar el set del show.
   **Vista Arragement:**
-  - 2. Ir a la vista Arragement para ver las pistas de audio.
-  - 3. Presionar las teclas **1**, **2**, **3** o **4** para seleccionar el audio a usar [Ver imagen 3](imgTutorial3.jpg).
-     - Si está reproduciendo, presionar **Barra espaciadora** para detenerlo.  
-     - Ejemplo: presionar **3** debería mostrar la bandera indicada en [Ver imagen 4](imgTutorial4.jpg).
+  - 2. Ir a la vista Arragement para ver las pistas de audio. [Ver imagen 3](imgTutorial3.jpg).
+  - 3. Presionar la tecla **1** para seleccionar el audio. [Ver imagen 4](imgTutorial4.jpg).
+     - Si está reproduciendo, presionar **Barra espaciadora** para detenerlo.
 **Vista Session:**
   - 4. Colocar el **volumen master en 0** antes de reproducir [Imagen bajar volumen](imgTutorial5.jpg).
-
-> **Nota:** En el punto 3, al presionar una tecla numerica entre el 1 y 4 cambias de audio.
-
+  - 5. Para los proyectos `Juntarse espacio reducido.toe`, `Juntarse espacio completo.toe` desactivar la pista del espacio (ruido blanco). Recomendación: poner en play la música, y se debería visualizar gris como la imagen (no se debería escuchar). [Ver imagen 17](imgTutorial17.jpg).
+  - 6. Para los proyectos `Juntarse espacio reducido ruido blanco de fondo.toe`, `Juntarse espacio completo ruido blanco de fondo.toe` activar la pista del espacio (ruido blanco). Recomendación: poner play la música, y se debería visualizar verde como la imagen (se debería escuchar) [Ver imagen 18](imgTutorial18.jpg).
 ---
 
 ## 6) Verificación antes de comenzar
@@ -82,9 +80,9 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
   - **CHOP**: al acercarce debería mostrar las variables de los jugadores en pantalla.
   - **TOP**: debería mostrar imagen en tiempo real.
 
-> **Consejo:** Si al iniciar el programa `Juntarse espacio reducido.toe`  o `Juntarse espacio.toe` se ve de fondo lo que la cámara de la Kinect graba, ya está funcionando correctamente la conexión.
+> **Consejo:** Si al iniciar un programa (por ejemplo: `Juntarse espacio reducido.toe`) se ve de fondo lo que la cámara de la Kinect graba, ya está funcionando correctamente la conexión.
 
-### Configuración de rutas de grabación (se realiza de la misma forma en ambos programas):
+### Configuración de rutas de grabación (se realiza de la misma forma en todos los programas):
   - 1. En TouchDesigner, ir a [Ver imagen 7](imgTutorial7.jpg):
    - `field COMP field_parejas`
    - `field COMP field_condicion`
@@ -94,12 +92,17 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
   - 5. Cambiar nombres siguiendo la nomenclatura:
    - Ej.: `Pareja1`, `Pareja2` (P mayúscula, resto minúscula, y terminando con el número de la pareja).
    - Ej.: `Condicion1`, `Condicion2` (C mayúscula, resto minúscula, sin tilde en la 'o', y terminando con el número de la condición).
+  - 6. Se propone dejar ya las condiciones con cada proyecto:
+  Condicion1: `Juntarse espacio reducido.toe`.
+  Condicion2: `Juntarse espacio completo.toe`.
+  Condicion3: `Juntarse espacio reducido ruido blanco de fondo.toe`.
+  Condicion4: `Juntarse espacio completo ruido blanco de fondo.toe`.
 
 > **Nota:** El nombre de la carpeta `repeticion` no se anota manualmente, se hace automáticamente. Si no existe ninguna prueba, se crea `Repeticion1`. Si ya existen repeticiones previas, se crea la siguiente disponible.
 
 
 ### Audio en Ableton
-- Por último, verigicar que el set de Ableton está listo.
+- Por último, verificar que el set de Ableton está listo.
 - En la vista Arragement, presionar el botón **Play** o la barra espaciadora para iniciar la música.
 
 > **Nota:** Al darle play o iniciar la música, no se deberia escuchar el sonido (el volumen debe estar bajado como se ve en el punto 5.4).
@@ -153,17 +156,17 @@ En Ableton existen dos tipos de vistas: Arrangement y Session.
 - Si se quiere realizar otra repetición con el **mismo proyecto de TouchDesigner**: volver al punto  5) Configuración en Ableton Live. Y luego:
     - Si es la misma pareja y condición, ir al punto 7)  Ejecución — Inicio de juego y grabación
     - Si se cambia la pareja o condición, volver al punto 6) Verificación antes de comenzar
-- Si se desea **cambiar de proyecto de TouchDesigner** (ejemplo: pasar de `Juntarse espacio reducido.toe` a `Juntarse espacio.toe`):
+- Si se desea **cambiar de proyecto de TouchDesigner** (ejemplo: pasar de `Juntarse espacio reducido.toe` a `Juntarse espacio completo.toe`):
     - Cerrar el proyecto actual en TouchDesigner.
     - Abrir el otro proyecto (`.toe`).
     - Verificar nuevamente la conexion con Kinect (punto 6).
     - Luego continuar desde el punto 5) Configuración de Ableton Live
 
-> **Nota:** Al cambiar de proyecto de TouchDesigner no es necesario cambiar el proyecto de Ableton Live. Se recomienda mantener abierto `Sonidos.als` durante toda la sesión.
+> **Nota:** Al cambiar de proyecto de TouchDesigner no es necesario cambiar el proyecto de Ableton Live aunque te lo pida (te va a pedir cerrar el proyecto de Ableton Live abierto actualmente para abrir el mismo, recomiendo poner en cancelar y continuar). Se recomienda mantener abierto `Sonidos.als` durante toda la sesión.
 
 ---
 
 ### Aclaraciones finales
 - Si el programa se detiene o sucede algún error durante la grabación, los archivos se guardan igualmente.
-- Ambos proyectos (`Juntarse espacio reducido.toe` y `Juntarse espacio.toe`) funcionan exactamente igual, solo cambian las variables internas.
-- Ambos proyectos (`Juntarse espacio reducido.toe` y `Juntarse espacio.toe`) utilizan el mismo proyecto de Ableton Live (`Sonidos.als`).
+- Todos los proyectos funcionan exactamente igual, solo cambian las variables internas.
+- Todos los proyectos utilizan el mismo proyecto de Ableton Live (`Sonidos.als`).
